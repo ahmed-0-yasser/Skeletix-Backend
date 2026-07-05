@@ -1,0 +1,6 @@
+@Skeletix_HostAddress = http://localhost:5233
+
+GET {{Skeletix_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
