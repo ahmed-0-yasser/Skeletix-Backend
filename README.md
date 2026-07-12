@@ -199,23 +199,23 @@ https://localhost:7045/swagger
 
 ![AI Analysis](3.png)
 
-### Reports APIs
+### 
 
 ![Reports](4.png)
 
-### Dashboard APIs
+### Reports APIs
 
 ![Dashboard](5.png)
 
-### API Responses
+### Dashboard APIs
 
 ![Responses](6.png)
 
-### JWT Authorization
+### Home
 
 ![Authorization](7.png)
 
-### Complete API Overview
+### Chatbot
 
 ![Swagger Overview](8.png)
 
