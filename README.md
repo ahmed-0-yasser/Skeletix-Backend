@@ -1,61 +1,179 @@
 # Skeletix Backend API
 
-Backend API for the Skeletix AI Bone Fracture Detection System, developed using ASP.NET Core Web API as part of the Graduation Project at The Egyptian E-Learning University (EELU).
+![Skeletix Banner](banner.jpeg)
 
-## Overview
+## AI-Powered Bone Fracture Detection System Backend
 
-Skeletix is an AI-powered healthcare system designed to assist healthcare professionals in detecting bone fractures from X-ray images. The backend provides secure RESTful APIs for authentication, medical file management, AI integration, reporting, dashboard statistics, and system administration.
+Skeletix Backend is a production-style RESTful API developed using **ASP.NET Core Web API** as part of the graduation project at **The Egyptian E-Learning University (EELU)**.
 
-## Features
+The backend provides secure and scalable services for an AI-powered healthcare platform that assists medical professionals in analyzing X-ray images, detecting bone fractures, generating reports, and managing patient medical data.
 
-* JWT Authentication and Authorization
-* User Authentication
-* Medical File Management
-* AI Fracture Analysis Integration
-* Dashboard and Reports
-* File Upload Management
-* RESTful API Architecture
-* Swagger API Documentation
+---
 
-## Technologies Used
+# Overview
+
+Skeletix is an intelligent healthcare system that combines **Artificial Intelligence and Backend Engineering** to support faster and more accurate bone fracture analysis.
+
+The backend acts as the core system responsible for:
+
+* User authentication and authorization.
+* Patient and medical file management.
+* X-ray image upload and processing.
+* AI model integration for fracture detection.
+* Analysis result management.
+* Report generation.
+* Dashboard statistics.
+* Secure communication with the frontend application.
+
+The system follows a clean and scalable architecture designed for real-world healthcare applications.
+
+---
+
+# Key Features
+
+## Authentication & Security
+
+* JWT Authentication.
+* User Registration and Login.
+* Role-Based Authorization.
+* Secure API endpoints.
+* Password hashing and identity management.
+
+## Medical File Management
+
+* Upload X-ray images.
+* Store patient medical files.
+* Manage analysis history.
+* Track medical examination records.
+
+## AI Fracture Analysis Integration
+
+The backend integrates with an Artificial Intelligence model to analyze X-ray images.
+
+The AI service provides:
+
+* Bone fracture detection.
+* Confidence score estimation.
+* Detection results.
+* Medical recommendations.
+* Analysis output images.
+
+The backend manages the complete workflow between users, AI services, database, and frontend applications.
+
+## Reports & Dashboard
+
+* Generate medical analysis reports.
+* Store analysis results.
+* Provide dashboard statistics.
+* Monitor system activities.
+
+## API Documentation
+
+* Interactive Swagger/OpenAPI documentation.
+* Easy API testing and exploration.
+
+---
+
+# System Architecture
+
+The project follows a layered architecture:
+
+```
+Skeletix Backend
+
+│
+├── Controllers
+│   └── Handle HTTP requests and API endpoints
+│
+├── Contracts
+│   └── Interfaces and service contracts
+│
+├── Entities
+│   └── Database models
+│
+├── Services
+│   └── Business logic implementation
+│
+├── Persistence
+│   └── Database context and configurations
+│
+├── Migrations
+│   └── Entity Framework Core migrations
+│
+├── Uploads
+│   └── Uploaded medical images
+│
+├── Program.cs
+│   └── Application configuration and dependency injection
+│
+└── appsettings.json
+    └── Application settings
+```
+
+---
+
+# Technologies Used
+
+## Backend
 
 * ASP.NET Core Web API
 * C#
 * Entity Framework Core
 * SQL Server
+* LINQ
+* Dependency Injection
 * JWT Authentication
-* Swagger (OpenAPI)
 * RESTful APIs
 
-## Project Structure
+## AI Integration
 
-```text
-Skeletix
-│
-├── Controllers
-├── Contracts
-├── Entities
-├── Migrations
-├── Persistence
-├── Services
-├── Uploads
-├── Program.cs
-└── appsettings.json
-```
+* AI Fracture Detection Model
+* REST API Communication
+* Image Processing Workflow
 
-## Authentication
+## Documentation & Tools
 
-The API uses JWT Bearer Authentication.
+* Swagger / OpenAPI
+* Visual Studio 2022
+* Git & GitHub
 
-Include the generated token in the Authorization header when accessing protected endpoints.
+---
+
+# Database
+
+The project uses:
+
+* SQL Server
+* Entity Framework Core
+* Code First Approach
+* Database Migrations
+
+Main responsibilities:
+
+* Store users data.
+* Manage medical files.
+* Store AI analysis results.
+* Maintain system records.
+
+---
+
+# Authentication
+
+Skeletix uses JWT Bearer Authentication.
+
+For protected endpoints, include the generated token in the request header:
 
 ```http
 Authorization: Bearer YOUR_TOKEN
 ```
 
-## API Documentation
+---
 
-Swagger documentation is available after running the application.
+# API Documentation
+
+The project provides interactive API documentation using Swagger/OpenAPI.
+
+Run the application and open:
 
 ```text
 /swagger
@@ -67,55 +185,145 @@ Example:
 https://localhost:7045/swagger
 ```
 
-## Getting Started
+## Swagger Screenshots
 
-### Clone the repository
+### Authentication APIs
+
+![Authentication](1.png)
+
+### Medical Files APIs
+
+![Medical Files](2.png)
+
+### AI Analysis APIs
+
+![AI Analysis](3.png)
+
+### Reports APIs
+
+![Reports](4.png)
+
+### Dashboard APIs
+
+![Dashboard](5.png)
+
+### API Responses
+
+![Responses](6.png)
+
+### JWT Authorization
+
+![Authorization](7.png)
+
+### Complete API Overview
+
+![Swagger Overview](8.png)
+
+---
+
+# Getting Started
+
+## Clone Repository
 
 ```bash
 git clone https://github.com/a7medyasser-tech/Skeletix-Backend.git
 ```
 
-### Navigate to the project
+## Navigate to Project
 
 ```bash
 cd Skeletix-Backend
 ```
 
-### Restore dependencies
+## Restore Dependencies
 
 ```bash
 dotnet restore
 ```
 
-### Configure the database
+## Configure Database
 
-Update the connection string inside `appsettings.json`, then run:
+Update the SQL Server connection string inside:
+
+```text
+appsettings.json
+```
+
+Then apply migrations:
 
 ```bash
 dotnet ef database update
 ```
 
-### Run the application
+## Run Application
 
 ```bash
 dotnet run
 ```
 
-## Graduation Project
+---
 
-This backend was developed as part of the Graduation Project at The Egyptian E-Learning University (EELU).
+# Graduation Project
 
-**Project Title:** Skeletix – AI Bone Fracture Detection System
+## Skeletix – AI Bone Fracture Detection System
 
-The system leverages Artificial Intelligence to analyze X-ray images, detect bone fractures, estimate urgency levels, and support healthcare professionals with faster and more accurate clinical decision-making. The backend is responsible for authentication, data management, AI service integration, reporting, and secure API communication with the frontend application.
+This backend was developed as part of the graduation project at:
 
-## Author
+**The Egyptian E-Learning University (EELU)**
 
-**Ahmed Yasser**
+Skeletix is an AI-powered healthcare platform designed to assist healthcare professionals in detecting bone fractures from X-ray images.
 
-* GitHub: https://github.com/a7medyasser-tech
-* LinkedIn: https://www.linkedin.com/in/ahmed-0-yasser
+The system uses Artificial Intelligence to:
 
-## License
+* Analyze medical X-ray images.
+* Detect possible fractures.
+* Estimate confidence levels.
+* Provide recommendations.
+* Generate structured medical reports.
 
-This project was developed for educational purposes.
+The backend is responsible for:
+
+* API development.
+* Database management.
+* Authentication.
+* AI model integration.
+* Report generation.
+* Secure communication between system components.
+
+---
+
+# Future Improvements
+
+* Cloud deployment.
+* Advanced medical analytics.
+* Real-time notifications.
+* Mobile application integration.
+* Enhanced AI prediction models.
+
+---
+
+# Author
+
+## Ahmed Yasser
+
+Backend Developer specialized in:
+
+* ASP.NET Core Web API
+* C#
+* Entity Framework Core
+* SQL Server
+* Backend System Development
+
+GitHub:
+
+https://github.com/a7medyasser-tech
+
+LinkedIn:
+
+https://www.linkedin.com/in/ahmed-0-yasser
+
+---
+
+# License
+
+This project was developed for educational and graduation project purposes.
